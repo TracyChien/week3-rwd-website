@@ -1,0 +1,152 @@
+@import 'variable.scss';
+.title{
+  padding-left: 16px;
+  border-left:  8px solid #9F1213;
+  font-size: 48px;
+  line-height: 80px;
+  font-weight: bold;
+  margin-bottom: 60px;
+
+  @include pad(){
+    border-left-width: 4px;
+    margin-bottom: 40px;
+  }
+  @include phone(){
+    font-size: 28px;
+    line-height: 40px;
+    margin-bottom: 24px;
+  }
+}
+.selector{
+  margin-bottom: 32px;
+
+  @include phone(){
+    margin-bottom: 20px;
+  }
+
+  span{
+    font-size: 24px;
+    line-height: 30px;
+    margin-right: 20px;
+    vertical-align: middle;
+    @include pad(){
+      font-size: 16px;
+    }
+    @include phone(){
+      font-size: 14px;
+      margin-right: 12px;
+    }
+  }
+  select{
+    padding: 11px 0;
+    width: 324px;
+    font-size: 18px;
+    line-height: 26px;
+    @include pad(){
+      width: 237px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+    @include phone(){
+      padding: 7px 0;
+      width: 277px;
+    }
+  }
+}
+.locationList{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include phone(){
+    flex-direction: column;
+  }
+
+  .locationItem{
+    width: 350px;
+    margin-bottom: 32px;
+    &.empty{
+      visibility: hidden;
+    }
+
+    @include pad(){
+      width: 330px;
+    }
+    @include phone(){
+      width: 100%;
+    }
+
+    img{
+      max-height: 234px;
+      width: 100%;
+      @include pad(){
+        max-height: 100%;
+      }
+    }
+    .locName{
+      padding: 12px 24px;
+      font-size: 24px;
+      line-height: 1.5;
+      border: 1px solid #00000020;
+      border-bottom: none;
+      @include pad(){
+        font-size: 16px;
+        padding: 8px 24px;
+      }
+    }
+    .locInfo{
+      border: 1px solid #00000020;
+      padding: 16px 24px;
+      li{
+        vertical-align: middle;
+        margin-bottom: 8px;
+        font-size: 20px;
+        line-height: 1.5;
+        &:last-child{
+          margin-bottom: 0px;
+        }
+
+        @include pad(){
+          font-size: 14px;
+        }
+        .icon{
+          display: inline-block;
+          width: 24px;
+          height: 24px;
+          margin-right: 8px;
+          &.verticalTop{
+            vertical-align: top;
+          }
+
+          @include pad(){
+            width: 20px;
+            height: 20px;
+          }
+        }
+        span{
+          width: 87%;
+          display: inline-block;
+          vertical-align: middle;
+          @include pad(){
+            width: 90%;
+          }
+        }
+      }
+    }
+    a{
+      display: block;
+      color: #FFF;
+      background-color: #000;
+      text-decoration: none;
+      text-align: center;
+      font-size: 19px;
+      line-height: 27px;
+      padding: 20px 0;
+      @include pad(){
+        font-size: 14px;
+        line-height: 21px;
+        padding: 16px 0;
+      }
+    }
+  }
+}
